@@ -1,0 +1,63 @@
+# Grading configuration for Lab 3.6: Capstone Project
+
+assignment:
+  id: L3.6-capstone
+  name: "Lab 3.6: Capstone Project"
+  level: 3
+  type: lab
+  passing_score: 70
+
+checks:
+  - id: instantiate
+    name: "Agents Load"
+    points: 15
+    type: instantiate
+    file: solution/agent.py
+  - id: swml_valid
+    name: "SWML Generation"
+    points: 15
+    type: swml_valid
+    file: solution/agent.py
+  - id: has_gateway
+    name: "Gateway Agent"
+    points: 15
+    type: swml_contains
+    file: solution/agent.py
+    require:
+      - text: "gateway"
+  - id: has_orders
+    name: "Orders Agent"
+    points: 15
+    type: swml_contains
+    file: solution/agent.py
+    require:
+      - text: "orders"
+  - id: has_support
+    name: "Support Agent"
+    points: 15
+    type: swml_contains
+    file: solution/agent.py
+    require:
+      - text: "support"
+  - id: has_transfer
+    name: "Agent Transfers"
+    points: 25
+    type: swml_contains
+    file: solution/agent.py
+    require:
+      - text: "transfer"
+
+feedback:
+  pass: |
+    Excellent work! You've completed Lab 3.6: Capstone Project.
+
+    **Next steps:**
+    - Review the concepts covered
+    - Continue to the next lab
+
+  fail: |
+    Some checks didn't pass. Review the requirements and try again.
+
+    **Tips:**
+    - Run `swaig-test solution/agent.py --list-tools` to verify functions
+    - Run `swaig-test solution/agent.py --dump-swml` to check SWML
