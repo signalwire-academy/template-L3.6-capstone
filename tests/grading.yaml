@@ -9,20 +9,23 @@ assignment:
 
 checks:
   - id: instantiate
-    name: "Agents Load"
+    name: "Gateway Agent Loads"
     points: 15
     type: instantiate
     file: solution/agent.py
+    agent_class: GatewayAgent
   - id: swml_valid
     name: "SWML Generation"
     points: 15
     type: swml_valid
     file: solution/agent.py
+    agent_class: GatewayAgent
   - id: has_gateway
     name: "Gateway Agent"
     points: 15
     type: swml_contains
     file: solution/agent.py
+    agent_class: GatewayAgent
     require:
       - text: "gateway"
   - id: has_orders
@@ -30,6 +33,7 @@ checks:
     points: 15
     type: swml_contains
     file: solution/agent.py
+    agent_class: OrdersAgent
     require:
       - text: "orders"
   - id: has_support
@@ -37,6 +41,7 @@ checks:
     points: 15
     type: swml_contains
     file: solution/agent.py
+    agent_class: SupportAgent
     require:
       - text: "support"
   - id: has_transfer
@@ -44,6 +49,7 @@ checks:
     points: 25
     type: swml_contains
     file: solution/agent.py
+    agent_class: GatewayAgent
     require:
       - text: "transfer"
 
