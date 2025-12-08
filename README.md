@@ -65,4 +65,10 @@ See `reference/starter.py` for a boilerplate template.
 
 ---
 
+## Next Assignment
+
+Ready for certification? [**Start Level 3 Written Exam**](https://classroom.github.com/a/3svHvvUr)
+
+---
+
 *SignalWire AI Agents Certification*
